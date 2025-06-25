@@ -29,8 +29,9 @@
     }
   </script>
   <script>
-    if (localStorage.getItem('theme') === 'dark') {
-      document.documentElement.classList.add('dark');
+    document.documentElement.classList.add('dark');
+    if (localStorage.getItem('theme') !== 'light') {
+      localStorage.setItem('theme', 'dark');
     }
 
     function toggleDarkMode() {
