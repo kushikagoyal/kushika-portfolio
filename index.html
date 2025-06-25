@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="transition-colors duration-500">
+<html lang="en" class="transition-colors duration-500 scroll-smooth">
 <head>
   <meta charset="UTF-8" />
   <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/1055/1055687.png">
@@ -41,6 +41,11 @@
     }
   </script>
   <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
 </head>
 <body class="transition-all duration-500 font-sans bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-100">
   <header class="bg-white dark:bg-gray-800 shadow sticky top-0 z-50 transition-all duration-500">
@@ -57,58 +62,52 @@
     </div>
   </header>
 
-  <section class="bg-secondary dark:bg-gray-700 text-center py-12 md:py-20 px-4 transition-all duration-500">
-    <h1 class="text-4xl font-bold text-primary dark:text-white mb-4">Hi, I'm Kushika Goyal</h1>
-    <p class="text-xl text-gray-700 dark:text-gray-200 mb-6">ERPNext Developer • Python Enthusiast • Open Source Contributor</p>
-    <a href="#contact" class="bg-white dark:bg-gray-900 text-primary dark:text-white font-semibold px-6 py-3 rounded-full shadow-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-all duration-500 border border-primary">Let's Connect</a>
+  <section id="about" class="py-16 px-6 max-w-4xl mx-auto text-center">
+    <h2 class="text-3xl font-bold mb-4">About Me</h2>
+    <p class="text-lg text-gray-700 dark:text-gray-300">
+      I'm a passionate ERPNext developer with experience in full-cycle implementation, module customization, and optimization for real business use-cases. Currently working as a Software Developer & Implementer at Rajlaxmi Solutions.
+    </p>
   </section>
 
-  <section id="about" class="py-10 md:py-16 px-6 max-w-4xl mx-auto transition-all duration-500">
-    <div class="bg-white dark:bg-gray-800 rounded-lg shadow p-6 text-center transition-all duration-500">
-      <h2 class="text-3xl font-bold mb-4">About Me</h2>
-      <p class="text-lg text-gray-700 dark:text-gray-300">
-        I'm a passionate ERPNext developer with experience in full-cycle implementation, module customization, and optimization for real business use-cases. Currently working as a Software Developer & Implementer at Rajlaxmi Solutions.
-      </p>
-    </div>
-  </section>
-
-  <section id="projects" class="py-10 md:py-16 px-6 max-w-4xl mx-auto transition-all duration-500">
-    <h2 class="text-3xl font-bold mb-6 text-center">Projects</h2>
-    <div class="grid gap-6 md:grid-cols-2">
-      <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow hover:shadow-lg transition-all duration-500">
-        <h3 class="text-xl font-semibold text-primary dark:text-white">Resume Parser for ERPNext</h3>
-        <p class="mt-2 text-gray-600 dark:text-gray-300">Custom Frappe app to auto-create Job Applicant records by parsing uploaded PDF resumes, streamlining recruitment.</p>
-      </div>
-      <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow hover:shadow-lg transition-all duration-500">
-        <h3 class="text-xl font-semibold text-primary dark:text-white">Overtime Automation System</h3>
-        <p class="mt-2 text-gray-600 dark:text-gray-300">Automated overtime calculation using check-in/out data in ERPNext, improving payroll accuracy and efficiency.</p>
+  <section id="projects" class="py-16 bg-gray-100 dark:bg-gray-800 px-6">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-3xl font-bold mb-6 text-center">Projects</h2>
+      <div class="grid gap-6 md:grid-cols-2">
+        <div class="p-4 border rounded bg-white dark:bg-gray-700 shadow">
+          <h3 class="text-xl font-semibold">Resume Parser for ERPNext</h3>
+          <p class="mt-2">Custom Frappe app to auto-create Job Applicant records by parsing uploaded PDF resumes, streamlining recruitment.</p>
+        </div>
+        <div class="p-4 border rounded bg-white dark:bg-gray-700 shadow">
+          <h3 class="text-xl font-semibold">Overtime Automation System</h3>
+          <p class="mt-2">Automated overtime calculation using check-in/out data in ERPNext, improving payroll accuracy and efficiency.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <section id="skills" class="py-10 md:py-16 px-6 max-w-4xl mx-auto transition-all duration-500">
+  <section id="skills" class="py-16 px-6 max-w-4xl mx-auto">
     <h2 class="text-3xl font-bold mb-6 text-center">Technical Skills</h2>
     <ul class="grid md:grid-cols-2 gap-4 text-lg">
-      <li class="bg-white dark:bg-gray-800 p-3 rounded shadow flex items-center justify-between transition-all duration-500">Frappe Framework / ERPNext <img src="https://github.com/frappe/erpnext/raw/develop/erpnext/public/images/erpnext-logo.png" class="w-6 h-6" alt="ERPNext logo"></li>
-      <li class="bg-white dark:bg-gray-800 p-3 rounded shadow flex items-center justify-between transition-all duration-500">Python, JavaScript, HTML, CSS <img src="https://cdn-icons-png.flaticon.com/512/5968/5968350.png" class="w-6 h-6" alt="code icon"></li>
-      <li class="bg-white dark:bg-gray-800 p-3 rounded shadow flex items-center justify-between transition-all duration-500">MySQL / MariaDB / Redis <img src="https://cdn-icons-png.flaticon.com/512/4248/4248443.png" class="w-6 h-6" alt="db icon"></li>
-      <li class="bg-white dark:bg-gray-800 p-3 rounded shadow flex items-center justify-between transition-all duration-500">Data Structures & Algorithms <img src="https://cdn-icons-png.flaticon.com/512/10726/10726945.png" class="w-6 h-6" alt="algorithm icon"></li>
+      <li class="bg-white dark:bg-gray-800 p-3 rounded shadow flex items-center justify-between">Frappe Framework / ERPNext <img src="https://github.com/frappe/erpnext/raw/develop/erpnext/public/images/erpnext-logo.png" class="w-6 h-6" alt="ERPNext logo"></li>
+      <li class="bg-white dark:bg-gray-800 p-3 rounded shadow flex items-center justify-between">Python, JavaScript, HTML, CSS <img src="https://cdn-icons-png.flaticon.com/512/5968/5968350.png" class="w-6 h-6" alt="code icon"></li>
+      <li class="bg-white dark:bg-gray-800 p-3 rounded shadow flex items-center justify-between">MySQL / MariaDB / Redis <img src="https://cdn-icons-png.flaticon.com/512/4248/4248443.png" class="w-6 h-6" alt="db icon"></li>
+      <li class="bg-white dark:bg-gray-800 p-3 rounded shadow flex items-center justify-between">Data Structures & Algorithms <img src="https://cdn-icons-png.flaticon.com/512/10726/10726945.png" class="w-6 h-6" alt="algorithm icon"></li>
     </ul>
   </section>
 
-  <section id="contact" class="py-10 md:py-16 px-6 max-w-4xl mx-auto transition-all duration-500">
-    <div class="bg-white dark:bg-gray-800 rounded-lg shadow p-6 transition-all duration-500">
+  <section id="contact" class="py-16 bg-white dark:bg-gray-900 px-6">
+    <div class="max-w-2xl mx-auto">
       <h2 class="text-3xl font-bold mb-6 text-center">Contact Me</h2>
       <form class="space-y-4" action="https://formspree.io/f/xnnvozjl" method="POST">
-        <input type="text" name="name" placeholder="Your Name" class="w-full p-3 border rounded bg-white text-gray-900 dark:bg-gray-700 dark:text-white transition-all duration-500" required />
-        <input type="email" name="email" placeholder="Your Email" class="w-full p-3 border rounded bg-white text-gray-900 dark:bg-gray-700 dark:text-white transition-all duration-500" required />
-        <textarea name="message" placeholder="Your Message" rows="5" class="w-full p-3 border rounded bg-white text-gray-900 dark:bg-gray-700 dark:text-white transition-all duration-500" required></textarea>
-        <button type="submit" class="bg-white dark:bg-gray-900 text-primary dark:text-white font-semibold px-6 py-2 rounded-lg shadow-md hover:bg-gray-100 dark:hover:bg-gray-800 transition-all duration-500 border border-primary">Send</button>
+        <input type="text" name="name" placeholder="Your Name" class="w-full p-3 border rounded bg-white text-gray-900 dark:bg-gray-700 dark:text-white" required />
+        <input type="email" name="email" placeholder="Your Email" class="w-full p-3 border rounded bg-white text-gray-900 dark:bg-gray-700 dark:text-white" required />
+        <textarea name="message" placeholder="Your Message" rows="5" class="w-full p-3 border rounded bg-white text-gray-900 dark:bg-gray-700 dark:text-white" required></textarea>
+        <button type="submit" class="bg-white dark:bg-gray-900 text-primary dark:text-white font-semibold px-6 py-2 rounded-lg shadow-md hover:bg-gray-100 dark:hover:bg-gray-800 transition border border-primary">Send</button>
       </form>
     </div>
   </section>
 
-  <footer class="text-center py-6 bg-gray-100 dark:bg-gray-800 text-sm transition-all duration-500">
+  <footer class="text-center py-6 bg-gray-100 dark:bg-gray-800 text-sm">
     © 2025 Kushika Goyal • <a href="mailto:kushikagoyal00@gmail.com" class="text-blue-500">Email</a> • <a href="https://www.linkedin.com/in/kushika-goyal-b88046204/" class="text-blue-500">LinkedIn</a>
   </footer>
 </body>
