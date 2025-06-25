@@ -1,24 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="">
 <head>
   <meta charset="UTF-8" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kushika Goyal | Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
+      darkMode: 'class',
       theme: {
         extend: {
           fontFamily: {
-            sans: ['Inter', 'sans-serif'],
+            sans: ['Poppins', 'sans-serif'],
           },
-        },
-      },
-    };
+          colors: {
+            primary: '#1e40af',
+            secondary: '#e0f2fe',
+          }
+        }
+      }
+    }
+  </script>
+  <script>
+    // Apply saved theme on page load
+    if (localStorage.getItem('theme') === 'dark') {
+      document.documentElement.classList.add('dark');
+    }
+
+    function toggleDarkMode() {
+      const html = document.documentElement;
+      html.classList.toggle('dark');
+      localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+    }
   </script>
 </head>
 <body class="bg-gray-50 text-gray-800 font-sans">
-  <header class="bg-white shadow sticky top-0 z-50">
+  <header class="bg-white dark:bg-gray-800 shadow sticky top-0 z-50">
     <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
       <h1 class="text-xl font-bold">Kushika Goyal</h1>
       <nav class="space-x-4">
@@ -27,9 +45,17 @@
         <a href="#skills" class="hover:underline">Skills</a>
         <a href="#contact" class="hover:underline">Contact</a>
         <a href="Kushika_Goyal_ERPNext_Resume_1.pdf" download class="text-blue-500 font-semibold">Resume</a>
+        <button onclick="toggleDarkMode()" class="bg-primary text-white px-3 py-1 rounded">Toggle Theme</button>
       </nav>
     </div>
   </header>
+
+  <!-- Hero Section -->
+  <section class="bg-secondary dark:bg-gray-700 text-center py-20 px-4">
+    <h1 class="text-4xl font-bold text-primary dark:text-white mb-4">Hi, I'm Kushika Goyal</h1>
+    <p class="text-xl text-gray-700 dark:text-gray-200 mb-6">ERPNext Developer • Python Enthusiast • Open Source Contributor</p>
+    <a href="#contact" class="bg-white dark:bg-gray-900 text-primary dark:text-white font-semibold px-6 py-3 rounded-full shadow-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition border border-primary">Let's Connect</a>
+  </section>
 
   <section id="about" class="py-16 px-6 max-w-4xl mx-auto text-center">
     <h2 class="text-3xl font-bold mb-4">About Me</h2>
@@ -38,15 +64,15 @@
     </p>
   </section>
 
-  <section id="projects" class="py-16 bg-gray-100 px-6">
+  <section id="projects" class="py-16 bg-gray-100 dark:bg-gray-800 px-6">
     <div class="max-w-4xl mx-auto">
       <h2 class="text-3xl font-bold mb-6 text-center">Projects</h2>
       <div class="grid gap-6 md:grid-cols-2">
-        <div class="p-4 border rounded bg-white shadow">
+        <div class="p-4 border rounded bg-white dark:bg-gray-700 shadow">
           <h3 class="text-xl font-semibold">Resume Parser for ERPNext</h3>
           <p class="mt-2">Custom Frappe app to auto-create Job Applicant records by parsing uploaded PDF resumes, streamlining recruitment.</p>
         </div>
-        <div class="p-4 border rounded bg-white shadow">
+        <div class="p-4 border rounded bg-white dark:bg-gray-700 shadow">
           <h3 class="text-xl font-semibold">Overtime Automation System</h3>
           <p class="mt-2">Automated overtime calculation using check-in/out data in ERPNext, improving payroll accuracy and efficiency.</p>
         </div>
@@ -64,19 +90,19 @@
     </ul>
   </section>
 
-  <section id="contact" class="py-16 bg-white px-6">
+  <section id="contact" class="py-16 bg-white dark:bg-gray-900 px-6">
     <div class="max-w-2xl mx-auto">
       <h2 class="text-3xl font-bold mb-6 text-center">Contact Me</h2>
       <form class="space-y-4" action="https://formspree.io/f/xnnvozjl" method="POST">
-        <input type="text" name="name" placeholder="Your Name" class="w-full p-3 border rounded" required />
-        <input type="email" name="email" placeholder="Your Email" class="w-full p-3 border rounded" required />
-        <textarea name="message" placeholder="Your Message" rows="5" class="w-full p-3 border rounded" required></textarea>
-        <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700">Send</button>
+        <input type="text" name="name" placeholder="Your Name" class="w-full p-3 border rounded dark:bg-gray-800 dark:text-white" required />
+        <input type="email" name="email" placeholder="Your Email" class="w-full p-3 border rounded dark:bg-gray-800 dark:text-white" required />
+        <textarea name="message" placeholder="Your Message" rows="5" class="w-full p-3 border rounded dark:bg-gray-800 dark:text-white" required></textarea>
+        <button type="submit" class="bg-white dark:bg-gray-900 text-primary dark:text-white font-semibold px-6 py-2 rounded-lg shadow-md hover:bg-gray-100 dark:hover:bg-gray-800 transition border border-primary">Send</button>
       </form>
     </div>
   </section>
 
-  <footer class="text-center py-6 bg-gray-100 text-sm">
+  <footer class="text-center py-6 bg-gray-100 dark:bg-gray-800 text-sm">
     © 2025 Kushika Goyal • <a href="mailto:kushikagoyal00@gmail.com" class="text-blue-500">Email</a> • <a href="https://www.linkedin.com/in/kushika-goyal-b88046204/" class="text-blue-500">LinkedIn</a>
   </footer>
 </body>
