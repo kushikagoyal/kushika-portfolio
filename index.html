@@ -16,8 +16,8 @@
             sans: ['Poppins', 'sans-serif'],
           },
           colors: {
-            primary: '#1e40af',
-            secondary: '#e0f2fe',
+            primary: '#7e22ce',
+            secondary: '#f3e8ff',
           },
           transitionProperty: {
             'bg': 'background-color',
@@ -57,59 +57,73 @@
         <a href="#projects" class="hover:underline">Projects</a>
         <a href="#skills" class="hover:underline">Skills</a>
         <a href="#contact" class="hover:underline">Contact</a>
-        <a href="Kushika_Goyal_ERPNext_Resume_1.pdf" download class="text-blue-500 font-semibold">Resume</a>
+        <a href="Kushika_Goyal_ERPNext_Resume_1.pdf" download class="text-purple-400 font-semibold">Resume</a>
         <button onclick="toggleDarkMode()" class="bg-primary text-white px-3 py-1 rounded transition-all duration-500">Toggle Theme</button>
       </nav>
     </div>
   </header>
 
-  <section id="about" class="py-16 px-6 max-w-4xl mx-auto text-center">
-    <h2 class="text-3xl font-bold mb-4">About Me</h2>
-    <p class="text-lg text-gray-700 dark:text-gray-300">
-      I'm a passionate ERPNext developer with experience in full-cycle implementation, module customization, and optimization for real business use-cases. Currently working as a Software Developer & Implementer at Rajlaxmi Solutions.
-    </p>
+  <section id="about" class="py-16 px-6 max-w-5xl mx-auto">
+    <div class="grid md:grid-cols-2 gap-8 items-center">
+      <img src="https://img.favpng.com/3/11/24/3d-woman-avatar-stylized-cartoon-woman-avatar-with-glasses-g0FutwYY_t.jpg" alt="avatar" class="rounded-full w-60 mx-auto">
+      <div>
+        <h2 class="text-4xl font-bold mb-4 text-primary dark:text-purple-200">Hi, I'm Kushika Goyal</h2>
+        <p class="text-lg text-gray-700 dark:text-gray-300">
+          ERPNext Developer • Python Enthusiast • Open Source Contributor<br>
+          Currently working as a Software Developer & Implementer at Rajlaxmi Solutions.
+        </p>
+      </div>
+    </div>
   </section>
 
-  <section id="projects" class="py-16 bg-gray-100 dark:bg-gray-800 px-6">
-    <div class="max-w-4xl mx-auto">
-      <h2 class="text-3xl font-bold mb-6 text-center">Projects</h2>
-      <div class="grid gap-6 md:grid-cols-2">
-        <div class="p-4 border rounded bg-white dark:bg-gray-700 shadow">
-          <h3 class="text-xl font-semibold">Resume Parser for ERPNext</h3>
-          <p class="mt-2">Custom Frappe app to auto-create Job Applicant records by parsing uploaded PDF resumes, streamlining recruitment.</p>
+  <section id="projects" class="py-16 bg-secondary dark:bg-purple-900 px-6">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl font-bold mb-6 text-center text-primary dark:text-purple-100">Projects</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow hover:shadow-xl transition-all">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMFjP_T5ABLsROcXw-4umFP-oXSRzOXWKMBg&s" alt="Resume Parser" class="w-full h-48 object-cover">
+          <div class="p-4">
+            <h3 class="text-xl font-semibold mb-2">Resume Parser for ERPNext</h3>
+            <p class="text-sm text-gray-700 dark:text-gray-300">Auto-creates Job Applicants from uploaded resumes in PDF using Frappe custom script.</p>
+          </div>
         </div>
-        <div class="p-4 border rounded bg-white dark:bg-gray-700 shadow">
-          <h3 class="text-xl font-semibold">Overtime Automation System</h3>
-          <p class="mt-2">Automated overtime calculation using check-in/out data in ERPNext, improving payroll accuracy and efficiency.</p>
+        <div class="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow hover:shadow-xl transition-all">
+          <img src="https://factorialhr.com/wp-content/uploads/2023/11/22181337/calculator-overtime-pay.png" alt="Overtime System" class="w-full h-48 object-cover">
+          <div class="p-4">
+            <h3 class="text-xl font-semibold mb-2">Overtime Automation System</h3>
+            <p class="text-sm text-gray-700 dark:text-gray-300">Calculates overtime using check-in/out data and integrates it with payroll in ERPNext.</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <section id="skills" class="py-16 px-6 max-w-4xl mx-auto">
-    <h2 class="text-3xl font-bold mb-6 text-center">Technical Skills</h2>
+    <h2 class="text-3xl font-bold mb-6 text-center text-primary dark:text-purple-100">Technical Skills</h2>
     <ul class="grid md:grid-cols-2 gap-4 text-lg">
       <li class="bg-white dark:bg-gray-800 p-3 rounded shadow flex items-center justify-between">Frappe Framework / ERPNext <img src="https://github.com/frappe/erpnext/raw/develop/erpnext/public/images/erpnext-logo.png" class="w-6 h-6" alt="ERPNext logo"></li>
       <li class="bg-white dark:bg-gray-800 p-3 rounded shadow flex items-center justify-between">Python, JavaScript, HTML, CSS <img src="https://cdn-icons-png.flaticon.com/512/5968/5968350.png" class="w-6 h-6" alt="code icon"></li>
       <li class="bg-white dark:bg-gray-800 p-3 rounded shadow flex items-center justify-between">MySQL / MariaDB / Redis <img src="https://cdn-icons-png.flaticon.com/512/4248/4248443.png" class="w-6 h-6" alt="db icon"></li>
       <li class="bg-white dark:bg-gray-800 p-3 rounded shadow flex items-center justify-between">Data Structures & Algorithms <img src="https://cdn-icons-png.flaticon.com/512/10726/10726945.png" class="w-6 h-6" alt="algorithm icon"></li>
     </ul>
+      <li class="bg-white dark:bg-gray-800 p-3 rounded shadow flex items-center justify-between">Data Structures & Algorithms <img src="https://cdn-icons-png.flaticon.com/512/10726/10726945.png" class="w-6 h-6" alt="algorithm icon"></li>
+    </ul>
   </section>
 
   <section id="contact" class="py-16 bg-white dark:bg-gray-900 px-6">
     <div class="max-w-2xl mx-auto">
-      <h2 class="text-3xl font-bold mb-6 text-center">Contact Me</h2>
+      <h2 class="text-3xl font-bold mb-6 text-center text-primary dark:text-purple-100">Contact Me</h2>
       <form class="space-y-4" action="https://formspree.io/f/xnnvozjl" method="POST">
         <input type="text" name="name" placeholder="Your Name" class="w-full p-3 border rounded bg-white text-gray-900 dark:bg-gray-700 dark:text-white" required />
         <input type="email" name="email" placeholder="Your Email" class="w-full p-3 border rounded bg-white text-gray-900 dark:bg-gray-700 dark:text-white" required />
         <textarea name="message" placeholder="Your Message" rows="5" class="w-full p-3 border rounded bg-white text-gray-900 dark:bg-gray-700 dark:text-white" required></textarea>
-        <button type="submit" class="bg-white dark:bg-gray-900 text-primary dark:text-white font-semibold px-6 py-2 rounded-lg shadow-md hover:bg-gray-100 dark:hover:bg-gray-800 transition border border-primary">Send</button>
+        <button type="submit" class="bg-primary text-white font-semibold px-6 py-2 rounded-lg shadow-md hover:bg-purple-800 transition border border-primary">Send</button>
       </form>
     </div>
   </section>
 
   <footer class="text-center py-6 bg-gray-100 dark:bg-gray-800 text-sm">
-    © 2025 Kushika Goyal • <a href="mailto:kushikagoyal00@gmail.com" class="text-blue-500">Email</a> • <a href="https://www.linkedin.com/in/kushika-goyal-b88046204/" class="text-blue-500">LinkedIn</a>
+    © 2025 Kushika Goyal • <a href="mailto:kushikagoyal00@gmail.com" class="text-purple-400">Email</a> • <a href="https://www.linkedin.com/in/kushika-goyal-b88046204/" class="text-purple-400">LinkedIn</a>
   </footer>
 </body>
 </html>
